@@ -1,0 +1,30 @@
+<div class="container">
+  <h3>Register Form</h3>
+  <div class="form-group">
+      <span>Email</span>
+      <!-- 
+        [(ngModel)] la mot thuoc tinh co san,
+        danh cho two way binding 
+       -->
+       <!-- #xxx allow you to get referrent element -->
+
+      <input #txtEmail [(ngModel)]="Email" type="email" class="form-control" placeholder="Email">
+  </div>
+  <br>
+  <div class="form-group">
+      <span>Full Name</span>
+      <!-- #xxx allow you to get referrent element -->
+      <input #txtFullName type="text" class="form-control" placeholder="FullName">
+  </div>
+  <br>
+  <div class="form-group">
+     <button (click)="ChangeFullName(txtFullName.value)" type="button" class="btn btn-success">Submit </button>
+  </div>
+</div>
+
+<div class="container">
+  <h3>Result</h3>
+  <span> Email: {{Email}}</span>
+  <br>
+  <span>FullName: {{FullName}}</span>
+</div>
